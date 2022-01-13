@@ -9,10 +9,7 @@ $ cd P7_TdB
 $ python3 -m venv P7_TdB
 $ pip install -r requirements.txt
 
-$ createdb python_getting_started
-
-$ python manage.py migrate
-$ python manage.py collectstatic
+$ python P7_App_test.py
 
 $ heroku local
 
