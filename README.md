@@ -1,12 +1,12 @@
 # P7_TdB
 PROJET 7 tableau de bord pour équipe relation client
 
-executer localement le TdB
+## executer localement le TdB
 
-$ git clone https://github.com/heroku/python-getting-started.git
-$ cd python-getting-started
+$ git clone https://github.com/elbo7777/P7_TdB.git
+$ cd P7_TdB
 
-$ python3 -m venv getting-started
+$ python3 -m venv P7_TdB
 $ pip install -r requirements.txt
 
 $ createdb python_getting_started
