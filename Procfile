@@ -1,1 +1,1 @@
-web: gunicorn api_home_risk:app
+web: run dash P7_TdB.py
