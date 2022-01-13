@@ -1,1 +1,1 @@
-web: run dash P7_TdB.py
+web: run dash P7_App_test.py
