@@ -17,37 +17,37 @@ from dash import dash_table
 from dash.dependencies import Input, Output
 import numpy as np
 import plotly.graph_objs as go
-from sklearn.pipeline import Pipeline
+# from sklearn.pipeline import Pipeline
 from operator import itemgetter
-from flask import Flask
-import plotly.express as px
-from textwrap import wrap
+# from flask import Flask
+# import plotly.express as px
+# from textwrap import wrap
 
-from sklearn.metrics import roc_curve, auc
-from sklearn.metrics import confusion_matrix
-import plotly.figure_factory as ff
+# from sklearn.metrics import roc_curve, auc
+# from sklearn.metrics import confusion_matrix
+# import plotly.figure_factory as ff
 
 
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
-from lime.lime_tabular import LimeTabularExplainer
+# from lime.lime_tabular import LimeTabularExplainer
 from sklearn.neighbors import NearestNeighbors
 
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import RobustScaler 
-from sklearn.impute import SimpleImputer
+# from sklearn.preprocessing import LabelEncoder
+#from sklearn.preprocessing import RobustScaler 
+# from sklearn.impute import SimpleImputer
 
-MainDir = "C:/Users/ELBO CONSULTING/FormationDS\PROJET 7 IMPLEMENTEZ UN MODELE DE SCORING/Projet_7"
+# MainDir = "C:/Users/ELBO CONSULTING/FormationDS\PROJET 7 IMPLEMENTEZ UN MODELE DE SCORING/Projet_7"
 
 # Lecture des données non étiquettés, i.e à prédire
-app_test = pd.read_csv(f'{MainDir}/app_test_1000.csv', sep=',', index_col=0, encoding='utf8')
+app_test = pd.read_csv('app_test_1000.csv', sep=',', index_col=0, encoding='utf8')
 
 # Lecture des données de validation
 conf_mx = pickle.load(open('conf_mx_ind_bk.md', 'rb'))
 
 # Lecture des données non étiquettés, brutes i.e non traités
-app_test_no_transformation = pd.read_csv(f'{MainDir}/app_test_no_transformation_1000.csv',sep=',',index_col=0,encoding='utf8')
+app_test_no_transformation = pd.read_csv('app_test_no_transformation_1000.csv',sep=',',index_col=0,encoding='utf8')
 
 # Lecture du modèle
 clf_pipe = pickle.load(open('banking_model.md', 'rb'))
