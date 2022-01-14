@@ -8,37 +8,14 @@ This is a temporary script file.
 import pickle
 import pandas as pd
 import dash
-# import dash_core_components as dcc
 from dash import dcc
-# import dash_html_components as html
 from dash import html
-# import dash_table
 from dash import dash_table
 from dash.dependencies import Input, Output
 import numpy as np
 import plotly.graph_objs as go
-# from sklearn.pipeline import Pipeline
 from operator import itemgetter
-# from flask import Flask
-# import plotly.express as px
-# from textwrap import wrap
-
-# from sklearn.metrics import roc_curve, auc
-# from sklearn.metrics import confusion_matrix
-# import plotly.figure_factory as ff
-
-
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-
-# from lime.lime_tabular import LimeTabularExplainer
 from sklearn.neighbors import NearestNeighbors
-
-# from sklearn.preprocessing import LabelEncoder
-#from sklearn.preprocessing import RobustScaler 
-# from sklearn.impute import SimpleImputer
-
-# MainDir = "C:/Users/ELBO CONSULTING/FormationDS\PROJET 7 IMPLEMENTEZ UN MODELE DE SCORING/Projet_7"
 
 # Lecture des données non étiquettés, i.e à prédire
 app_test = pd.read_csv('app_test_1000.csv', sep=',', index_col=0, encoding='utf8')
