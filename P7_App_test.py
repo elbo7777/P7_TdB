@@ -35,6 +35,12 @@ x_test_transformed = pd.DataFrame(clf_pipe[0].transform(app_test.drop(columns=["
 # Calcul des 20 plus proches voisins
 nbrs = NearestNeighbors(n_neighbors=20, algorithm='ball_tree').fit(x_test_transformed)
 
+# Interprétabilité du modèle
+lime1 = LimeTabularExplainer(x_test_transformed,
+                             feature_names = x_test_transformed.columns,
+                             class_names = ["Solvable", "Non Solvable"],
+                             discretize_continuous = False)
+
 def feature_importances(n_top_features = 20):
     
     indices, values = [], []
