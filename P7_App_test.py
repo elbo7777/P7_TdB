@@ -18,8 +18,6 @@ from operator import itemgetter
 from sklearn.neighbors import NearestNeighbors
 from lime.lime_tabular import LimeTabularExplainer
 
-server = app.server
-
 # Lecture des données non étiquettés, i.e à prédire
 app_test = pd.read_csv('app_test_1000.csv', sep=',', index_col=0, encoding='utf8')
 
@@ -103,6 +101,8 @@ num_columns = app_test_no_transformation.select_dtypes(include=["float64"]).colu
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+server = app.server
 
 app.layout = html.Div([
     
