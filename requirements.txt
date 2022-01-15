@@ -10,3 +10,4 @@ pickleshare==0.7.5
 plotly==4.3.0
 seaborn==0.9.0
 scikit-learn==1.0.1
+gunicorn==20.1.0
