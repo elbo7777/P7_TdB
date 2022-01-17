@@ -101,11 +101,11 @@ num_columns = app_test_no_transformation.select_dtypes(include=["float64"]).colu
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-server = flask.Flask(__name__) # define flask app.server
+# server = flask.Flask(__name__) # define flask app.server
 
-app = dash.Dash(__name__, external_stylesheets = external_stylesheets, server=server)
+app = dash.Dash(__name__, external_stylesheets = external_stylesheets)
 
-# server = app.server
+server = app.server
 
 app.layout = html.Div([
     
