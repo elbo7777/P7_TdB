@@ -1,1 +1,1 @@
-web: gunicorn P7_App_test:server
+web: gunicorn P7_App_test:app.server
