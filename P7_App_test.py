@@ -17,6 +17,7 @@ import plotly.graph_objs as go
 from operator import itemgetter
 from sklearn.neighbors import NearestNeighbors
 from lime.lime_tabular import LimeTabularExplainer
+import flask
 
 # Lecture des données non étiquettés, i.e à prédire
 app_test = pd.read_csv('app_test_1000.csv', sep=',', index_col=0, encoding='utf8')
@@ -100,9 +101,11 @@ num_columns = app_test_no_transformation.select_dtypes(include=["float64"]).colu
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = flask.Flask(__name__) # define flask app.server
 
-server = app.server
+app = dash.Dash(__name__, external_stylesheets = external_stylesheets, server=server)
+
+# server = app.server
 
 app.layout = html.Div([
     
@@ -402,4 +405,4 @@ def update_graphic(id_client) :
 
     
 if __name__ == '__main__':
-    app.run_server(debug = False)
+    app.run_server(debug = True)
