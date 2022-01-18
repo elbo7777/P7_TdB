@@ -19,3 +19,5 @@ $ git push heroku main
 $ heroku run python P7_App_test.py
 $ heroku open
 ```
+## éxécution sur le web en production via heroku : 
+- pour accéder au tableau de bord : https://p7tdb.herokuapp.com
